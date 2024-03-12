@@ -1,0 +1,67 @@
+spring:
+  mail:
+    host: smtp.timeweb.ru
+    port: 25
+    username: admin@request-desk.ru
+    password: Sirenko2706200025@
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  jpa:
+    database: POSTGRESQL
+    hibernate.ddl-auto: validate  # create or create-drop or validate
+    show-sql: true
+
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://46.229.212.143:5432/default_db
+    username: gen_user
+    password: Sirenko2706200023
+    hikari:
+      max-lifetime: 600000
+
+  tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+
+
+server:
+  port: 8080 # This is the default port anyway, but you can change it here
+
+security:
+  jwt:
+    token:
+      secret-key: secret-key
+      expire-length: 31536000000 # 5 minutes duration by default: 5 minutes * 60 seconds * 1000 miliseconds
+
+UserController:
+  signin: Авторизация пользователя
+  signup: Создание пользователя
+  delete: Удаление пользователя
+  search: Получение пользователя
+  getUsers: Получение пользователей
+  me: Получение текущего пользователя
+
+ObjectController:
+  create: Создание объекта
+  delete: Удаление объекта
+  update: Обновление объекта
+  get: Получение объекта
+  getAll: Получение всех объектов
+
+FilialController:
+  create: Создание филиала
+  delete: Удаление филиала
+  update: Обновление филиала
+  get: Получение филиала
+  getAll: Получение всех филиалов
+
+EquipmentController:
+  create: Создание оборудование
+  delete: Удаление оборудования
+  update: Обновдение оборудование
+  get: Получение оборудования
+  getAll: Получение всех филиалов

@@ -1,0 +1,59 @@
+2023-12-03 20:21:40.064  INFO 11324 --- [restartedMain] de401t.JwtAuthServiceApp                 : Starting JwtAuthServiceApp using Java 11.0.11 on nick.local with PID 11324 (/Users/nick/IdeaProjects/spring-boot-jwt/target/classes started by nick in /Users/nick/IdeaProjects/spring-boot-jwt)
+2023-12-03 20:21:40.067 DEBUG 11324 --- [restartedMain] de401t.JwtAuthServiceApp                 : Running with Spring Boot v2.5.4, Spring v5.3.9
+2023-12-03 20:21:40.067  INFO 11324 --- [restartedMain] de401t.JwtAuthServiceApp                 : No active profile set, falling back to default profiles: default
+2023-12-03 20:21:40.116  INFO 11324 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/nick/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar referenced one or more files that do not exist: file:/Users/nick/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-api.jar
+2023-12-03 20:21:40.117  INFO 11324 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/nick/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar referenced one or more files that do not exist: file:/Users/nick/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-core.jar
+2023-12-03 20:21:40.117  INFO 11324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-03 20:21:40.118  INFO 11324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-03 20:21:41.206  INFO 11324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-03 20:21:41.293  INFO 11324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 11 JPA repository interfaces.
+2023-12-03 20:21:41.754  INFO 11324 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@650071a6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-03 20:21:41.761  INFO 11324 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-03 20:21:41.987  INFO 11324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-03 20:21:41.993  INFO 11324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-03 20:21:41.993  INFO 11324 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2023-12-03 20:21:42.061  INFO 11324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-03 20:21:42.062  INFO 11324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1944 ms
+2023-12-03 20:21:42.103  INFO 11324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-03 20:21:43.101  INFO 11324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-03 20:21:43.114  INFO 11324 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://46.229.212.143:5432/default_db'
+2023-12-03 20:21:43.248  INFO 11324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-03 20:21:43.272  INFO 11324 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2023-12-03 20:21:43.353  INFO 11324 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-03 20:21:43.433  INFO 11324 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-12-03 20:21:45.326  INFO 11324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-03 20:21:45.352  INFO 11324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-03 20:21:45.784  WARN 11324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-03 20:21:46.507  INFO 11324 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-12-03 20:21:46.610  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2023-12-03 20:21:46.610  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2023-12-03 20:21:46.610  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2023-12-03 20:21:46.610  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2023-12-03 20:21:46.610  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2023-12-03 20:21:46.610  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2023-12-03 20:21:46.610  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2023-12-03 20:21:46.632  INFO 11324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6204e946, org.springframework.security.web.context.SecurityContextPersistenceFilter@752a96f2, org.springframework.security.web.header.HeaderWriterFilter@3f70749e, org.springframework.security.web.authentication.logout.LogoutFilter@2107e91d, de401t.security.JwtTokenFilter@1278470e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@197438c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68ed5e3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f90b3fa, org.springframework.security.web.session.SessionManagementFilter@730af57e, org.springframework.security.web.access.ExceptionTranslationFilter@18fd683c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d2a13e8]
+2023-12-03 20:21:46.783  INFO 11324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-12-03 20:21:46.976  INFO 11324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-03 20:21:46.978  INFO 11324 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-12-03 20:21:46.990  INFO 11324 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-12-03 20:21:47.010  INFO 11324 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-12-03 20:21:47.142  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2023-12-03 20:21:47.144  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2023-12-03 20:21:47.153  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2023-12-03 20:21:47.156  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_1
+2023-12-03 20:21:47.157  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
+2023-12-03 20:21:47.179  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_2
+2023-12-03 20:21:47.221  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_3
+2023-12-03 20:21:47.224  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2023-12-03 20:21:47.232  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2023-12-03 20:21:47.235  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_2
+2023-12-03 20:21:47.246  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
+2023-12-03 20:21:47.280  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_4
+2023-12-03 20:21:47.371  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_3
+2023-12-03 20:21:47.380  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_3
+2023-12-03 20:21:47.407  INFO 11324 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_4
+2023-12-03 20:21:47.432  INFO 11324 --- [restartedMain] de401t.JwtAuthServiceApp                 : Started JwtAuthServiceApp in 7.84 seconds (JVM running for 13.834)
+2023-12-03 20:22:41.434  INFO 11324 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-03 20:22:41.444  INFO 11324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-03 20:22:42.043  INFO 11324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

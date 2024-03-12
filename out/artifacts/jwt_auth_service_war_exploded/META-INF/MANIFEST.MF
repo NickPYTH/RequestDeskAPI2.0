@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: nick
+Build-Jdk: AdoptOpenJDK (HotSpot) version 11.0.11
+Implementation-Title: spring-boot-jwt
+Implementation-Version: 1.0.0
+Implementation-Vendor-Id: murraco
+Main-Class: de401t.JwtAuthServiceApp
+
