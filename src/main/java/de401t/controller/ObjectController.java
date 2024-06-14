@@ -8,7 +8,6 @@ import de401t.model.Obj;
 import de401t.service.ObjectService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -73,7 +72,6 @@ public class ObjectController {
     @CrossOrigin(origins = "*")
     @GetMapping("/all")
     @ApiOperation(value = "${ObjectController.getAll}")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
             @ApiResponse(code = 403, message = "Доступ ограничен"), //
@@ -86,7 +84,6 @@ public class ObjectController {
     @CrossOrigin(origins = "*")
     @GetMapping("/allNoEquipments")
     @ApiOperation(value = "${ObjectController.getAll}")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
             @ApiResponse(code = 403, message = "Доступ ограничен"), //
@@ -98,7 +95,6 @@ public class ObjectController {
 
     @CrossOrigin(origins = "*")
     @GetMapping(value = "/my")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('client') or hasAuthority('executor')")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"),
             @ApiResponse(code = 403, message = "Доступ ограничен"),

@@ -11,7 +11,6 @@ import de401t.service.FilialService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +26,6 @@ public class FilialController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/create")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${FilialController.create}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -41,7 +39,6 @@ public class FilialController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping("/delete/{id}")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${FilialController.delete}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -55,7 +52,6 @@ public class FilialController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/update")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${FilialController.update}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -69,7 +65,6 @@ public class FilialController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/get/{id}")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${FilialController.get}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //

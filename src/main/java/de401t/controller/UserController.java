@@ -5,7 +5,6 @@ import de401t.service.UserService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -48,7 +47,6 @@ public class UserController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/update")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${UserController.signup}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -60,7 +58,6 @@ public class UserController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/{username}")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${UserController.delete}", authorizations = {@Authorization(value = "apiKey")})
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -73,7 +70,6 @@ public class UserController {
 
     @CrossOrigin(origins = "*")
     @GetMapping(value = "/{username}")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${UserController.search}", response = UserDataDTO.class, authorizations = {@Authorization(value = "apiKey")})
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"),
@@ -86,7 +82,6 @@ public class UserController {
 
     @CrossOrigin(origins = "*")
     @GetMapping(value = "/all")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${UserController.getUsers}", response = UserDataDTO.class,
             responseContainer = "List",
             authorizations = {@Authorization(value = "apiKey")})

@@ -8,7 +8,6 @@ import de401t.service.EquipmentService;
 import de401t.service.MessageService;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,9 +23,8 @@ public class MessageController {
     private final MessageService messageService;
 
     @PostMapping("/create")
-    @PreAuthorize("hasAuthority('client') or hasAuthority('admin') or hasAuthority('executor')")
     @ApiOperation(value = "${MessageController.create}")
-    @ApiResponses(value = {//
+    @ApiResponses(value = {
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
             @ApiResponse(code = 403, message = "Доступ ограничен"), //
             @ApiResponse(code = 422, message = "Оборудование с таким наименованием уже существует"), //
@@ -38,7 +36,6 @@ public class MessageController {
 
     @GetMapping("/task/{id}")
     @ApiOperation(value = "${EquipmentController.getAll}")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('client') or hasAuthority('executor')")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
             @ApiResponse(code = 403, message = "Доступ ограничен"), //
@@ -50,7 +47,6 @@ public class MessageController {
 
     @GetMapping("/task/super/{id}")
     @ApiOperation(value = "${EquipmentController.getAll}")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
             @ApiResponse(code = 403, message = "Доступ ограничен"), //

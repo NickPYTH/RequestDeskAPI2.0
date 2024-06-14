@@ -14,7 +14,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
@@ -36,7 +35,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/create")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('client') or hasAuthority('executor')")
     @ApiOperation(value = "${FilialController.create}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -50,7 +48,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/createByAdmin")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${FilialController.create}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -64,7 +61,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/update")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('client')")
     @ApiOperation(value = "${FilialController.update}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -78,7 +74,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/updateStatus/{taskId}/{status}")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('executor')")
     @ApiOperation(value = "${FilialController.updateStatus}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -92,7 +87,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/updateStatus/{taskId}/{status}/{date}")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('executor')")
     @ApiOperation(value = "${FilialController.updateStatus}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -106,8 +100,7 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/get/{id}")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('client') or hasAuthority('executor')")
-    @ApiOperation(value = "${TaskController.getById}")
+   @ApiOperation(value = "${TaskController.getById}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
             @ApiResponse(code = 403, message = "Доступ ограничен"), //
@@ -120,7 +113,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/my")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('client') or hasAuthority('executor')")
     @ApiOperation(value = "${TaskController.my}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -134,7 +126,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/all")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${TaskController.all}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -172,7 +163,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/loadEquipmentsFromExcel")
-    @PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${TaskController.loadEquipmentsFromExcel}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
@@ -185,7 +175,6 @@ public class TaskController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/allExcel")
-    @PreAuthorize("hasAuthority('admin') or hasAuthority('executor')")
     @ApiOperation(value = "${TaskController.allExcel}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
