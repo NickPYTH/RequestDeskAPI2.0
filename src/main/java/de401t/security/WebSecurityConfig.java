@@ -30,17 +30,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     // No session will be created or used by spring security
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-    // Entry points
-//    http.authorizeRequests()//
-//        .antMatchers("/api/users/**").permitAll()//
-//        .antMatchers("/api/objects/**").permitAll()//
-//        .antMatchers("/api/filials/**").permitAll()//
-//        .antMatchers("/api/tasks/**").permitAll()//
-//        .antMatchers("/api/equipments/**").permitAll()//
-//        .antMatchers("/api/messages/**").permitAll()//
-//        .antMatchers("/h2-console/**/**").permitAll()
-//        // Disallow everything else..
-//        .anyRequest().authenticated();
+     //Entry points
+    http.authorizeRequests()//
+        .antMatchers("/api/users/**").permitAll()//
+        .antMatchers("/api/objects/**").permitAll()//
+        .antMatchers("/api/filials/**").permitAll()//
+        .antMatchers("/api/tasks/**").permitAll()//
+        .antMatchers("/api/equipments/**").permitAll()//
+        .antMatchers("/api/messages/**").permitAll()//
+        .antMatchers("/h2-console/**/**").permitAll()
+        // Disallow everything else..
+        .anyRequest().permitAll();// authenticated();
 
     // If a user try to access a resource without having enough permissions
     http.exceptionHandling().accessDeniedPage("/login");
