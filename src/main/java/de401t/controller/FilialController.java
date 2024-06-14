@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/filials")
+@RequestMapping("/apiNew/filials")
 @Api(tags = "filials")
 @RequiredArgsConstructor
 public class FilialController {

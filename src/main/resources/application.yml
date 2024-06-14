@@ -18,6 +18,9 @@ spring:
     url: jdbc:postgresql://46.229.212.143:5432/default_db
     username: gen_user
     password: Sirenko2706200023
+    #url: jdbc:postgresql://localhost:5432/requestDesk
+    #username: postgres
+    #password: 12345678
     hikari:
       max-lifetime: 600000
 
