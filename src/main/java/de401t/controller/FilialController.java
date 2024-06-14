@@ -83,7 +83,7 @@ public class FilialController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/all")
-    @PreAuthorize("hasAuthority('admin')")
+    //@PreAuthorize("hasAuthority('admin')")
     @ApiOperation(value = "${FilialController.getAll}")
     @ApiResponses(value = {//
             @ApiResponse(code = 400, message = "Что-то пошло не так"), //
