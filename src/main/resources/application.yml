@@ -17,7 +17,7 @@ spring:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://46.229.212.143:5432/default_db
     username: gen_user
-    password: Sirenko2706200023
+    password: iOn2XS!Z6VEcL;
     #url: jdbc:postgresql://localhost:5432/requestDesk
     #username: postgres
     #password: 12345678
